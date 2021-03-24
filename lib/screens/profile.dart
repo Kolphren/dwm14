@@ -25,15 +25,26 @@ class ProfileScreen extends StatelessWidget {
                   child: Center(
                     child: Column(
                       children: [
-                        Text('Email : '+ info[0].email.toString()),
+                        SizedBox(height: 80),
+                        Text('Email', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
+                        Text(info[0].email.toString(), style: TextStyle(fontSize: 20),),
                         SizedBox(height: 10),
-                        Text('Nom : '+ info[0].name.toString()),
+                        Text('Nom', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
+                        Text(info[0].name.toString(), style: TextStyle(fontSize: 20),),
                         SizedBox(height: 10),
-                        Text('Prénom : '+ info[0].firstName.toString()),
+                        Text('Prénom', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
+                        Text(info[0].firstName.toString(), style: TextStyle(fontSize: 20),),
                         SizedBox(height: 10),
-                        Text('Ville de résidence : '+ info[0].city.toString()),
-                        SizedBox(height: 10),
-
+                        Text('Ville de résidence', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
+                        Text(info[0].city.toString(), style: TextStyle(fontSize: 20),),
+                        SizedBox(height: 50),
+                        ElevatedButton(
+                          onPressed: () async {
+                            await firebaseAuth.signOut();
+                            Navigator.pushReplacementNamed(context, '/login');
+                          },
+                          child: Text('Déconnexion'),
+                          )
                       ]
                     ),
                   ),

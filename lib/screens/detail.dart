@@ -31,17 +31,39 @@ class DetailScreen extends StatelessWidget {
                     ),
                     Text('Titre : '+ info[0].title),
                     SizedBox(height: 10),
-                    Text('Année de sortie : '+info[0].year),
+                    Text('Année de sortie : '+ info[0].year),
                     SizedBox(height: 10),
                     Text('Durée (en minutes) : ' + info[0].runtime),
                     SizedBox(height: 10),
                     Text('Genres : '+ info[0].kind.toString()),
                     SizedBox(height: 10),
-                    Text('Acteurs : ' + info[0].actors.toString()),
+                    Text('Acteurs : ' + info[0].actors.toString(), textAlign: TextAlign.center,),
                     SizedBox(height: 10),
-                    Text('Synopsis : ' + info[0].plot),
+                    Text('Synopsis : ' + info[0].plot, textAlign: TextAlign.center,),
                     SizedBox(height: 10),
-                    Text('Note : ' + info[0].ratings[2]['value']),
+                    Container(
+                      child:Row(
+                        children: [
+                          for (var i = 0; i < info[0].ratings.length; i++) 
+                          Padding(
+                            padding: const EdgeInsets.all(23.23),
+                            child: Column(
+                              children: [
+                                Container(
+                                  height: 100,
+                                  width: 50,
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: NetworkImage(info[0].ratings[i]['logo']))),
+                                ),
+                              Text(info[0].ratings[i]['source']),
+                              Text('Note : ' + info[0].ratings[i]['value']),
+                              ],
+                            ),
+                          ),
+                        ],
+                      )
+                    ),
                   ]
                 ),
               ),
