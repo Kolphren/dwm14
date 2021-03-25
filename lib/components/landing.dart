@@ -35,8 +35,10 @@ class Landing extends StatelessWidget {
             itemCount: movies.length,
             itemBuilder: (context, index) {
               return Padding(
-                padding: EdgeInsets.all(8), 
+                padding: EdgeInsets.all(8.0), 
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     GestureDetector(
                       onTap: () {
@@ -45,14 +47,14 @@ class Landing extends StatelessWidget {
                         );
                       },
                       child: Container(
-                        height: 200,
-                        width: 88,
+                        height: 450,
+                        width: 400,
                         decoration: BoxDecoration(
                           image: DecorationImage(
                             image: NetworkImage(movies[index].poster))),
                       ),
                     ),
-                    Text(movies[index].title),
+                    Text(movies[index].title, style: TextStyle(fontWeight: FontWeight.bold),),
                     Text(movies[index].year),
                     Text(movies[index].kind.toString()),
                   ]

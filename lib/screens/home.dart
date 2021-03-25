@@ -32,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Flutter'), centerTitle: true,
+          title: Text('Allo Films'), centerTitle: true,
         ),
         drawer: DrawerMenu(),
         body: SafeArea(

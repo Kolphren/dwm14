@@ -26,16 +26,16 @@ class ProfileScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         SizedBox(height: 80),
-                        Text('Email', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
+                        Text('Email', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, decoration: TextDecoration.underline),),
                         Text(info[0].email.toString(), style: TextStyle(fontSize: 20),),
                         SizedBox(height: 10),
-                        Text('Nom', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
+                        Text('Nom', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, decoration: TextDecoration.underline),),
                         Text(info[0].name.toString(), style: TextStyle(fontSize: 20),),
                         SizedBox(height: 10),
-                        Text('Prénom', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
+                        Text('Prénom', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, decoration: TextDecoration.underline),),
                         Text(info[0].firstName.toString(), style: TextStyle(fontSize: 20),),
                         SizedBox(height: 10),
-                        Text('Ville de résidence', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
+                        Text('Ville de résidence', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25,decoration: TextDecoration.underline),),
                         Text(info[0].city.toString(), style: TextStyle(fontSize: 20),),
                         SizedBox(height: 50),
                         ElevatedButton(

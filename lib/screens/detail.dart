@@ -19,7 +19,7 @@ class DetailScreen extends StatelessWidget {
 
             return Container(
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(7.0),
                 child: Column(
                   children: [
                     Container(

@@ -15,9 +15,9 @@ class DrawerMenu extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: [
           ListTile(
-            title: Text('Detail'),
+            title: Text('Home'),
             onTap: (){
-              Navigator.pushReplacementNamed(context, '/detail');
+              Navigator.pushReplacementNamed(context, '/home');
             },
           ),
           ListTile(
