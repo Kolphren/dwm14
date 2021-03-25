@@ -1,4 +1,4 @@
-  
+
 import 'package:dwm14/routes.dart';
 import 'package:dwm14/screens/error.dart';
 import 'package:dwm14/screens/loading.dart';
@@ -26,8 +26,9 @@ class MyApp extends StatelessWidget {
         if (snapshot.connectionState == ConnectionState.done) {
           return MaterialApp(
             title: 'Flutter Demo',
+            debugShowCheckedModeBanner: false,
             theme: ThemeData (
-              primarySwatch: Colors.deepPurple,
+              primarySwatch: Colors.lightBlue,
             ),
             routes: routes,
             initialRoute: isLogged() != null ? '/home' : '/login',

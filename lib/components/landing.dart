@@ -54,6 +54,7 @@ class Landing extends StatelessWidget {
                             image: NetworkImage(movies[index].poster))),
                       ),
                     ),
+                    SizedBox(height: 20),
                     Text(movies[index].title, style: TextStyle(fontWeight: FontWeight.bold),),
                     Text(movies[index].year),
                     Text(movies[index].kind.toString()),
